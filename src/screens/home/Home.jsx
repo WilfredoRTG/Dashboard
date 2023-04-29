@@ -4,6 +4,7 @@ import MoreVisited from "./components/MoreVisited";
 import Capacity from "./components/Capacity";
 import Days from "./components/Days";
 import AvailableSpots from "./components/AvailableSpots";
+import Drawer from "./components/Drawer";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
             <AvailableSpots/>
           </div>
         </div>
+        <Drawer/>
       </div>
     </>
   );

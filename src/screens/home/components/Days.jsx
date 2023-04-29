@@ -1,38 +1,29 @@
 import React from "react";
-import {
-  Radar,
-  RadarChart,
-  PolarGrid,
-  Legend,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-  ResponsiveContainer,
-} from "recharts";
-import { Grid } from "@mui/material";
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const data = [
   {
-    subject: "Enero",
+    name: "Enero",
     A: 120,
   },
   {
-    subject: "Febrero",
+    name: "Febrero",
     A: 98,
   },
   {
-    subject: "Marzo",
+    name: "Marzo",
     A: 86,
   },
   {
-    subject: "Abril",
+    name: "Abril",
     A: 99,
   },
   {
-    subject: "Mayo",
+    name: "Mayo",
     A: 85,
   },
   {
-    subject: "Junio",
+    name: "Junio",
     A: 65,
   },
 ];
@@ -41,19 +32,24 @@ const Chart = ({ lugar, color }) => {
   return (
     <div className="daysContainer">
       <h3 className="text">Mes mas concurrido en {lugar}</h3>
-      <ResponsiveContainer width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-          <PolarGrid />
-          <PolarAngleAxis dataKey="subject" />
-          <PolarRadiusAxis />
-          <Radar
-            name="Mike"
-            dataKey="A"
-            stroke="#fff"
-            fill={color}
-            fillOpacity={0.6}
-          />
-        </RadarChart>
+      <ResponsiveContainer width="70%" height="100%">
+        <AreaChart
+          width={500}
+          height={400}
+          data={data}
+          margin={{
+            top: 10,
+            right: 30,
+            left: 0,
+            bottom: 0,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Area type="monotone" dataKey="A" stroke="#8884d8" fill="#8884d8" />
+        </AreaChart>
       </ResponsiveContainer>
     </div>
   );
