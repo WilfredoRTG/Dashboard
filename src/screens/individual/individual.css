@@ -1,0 +1,56 @@
+.parking{
+    width: 100%;
+}
+
+.wrapperHours{
+    width: 550px;
+    height: 250px;
+}
+
+.containerGraphs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.legendContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerGraphsStudent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.number{
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.containerDrawer{
+    right: 0;
+    margin-right: 40px;
+    position: fixed;
+    height: 100vh;
+    z-index: 100;
+}
+
+.wrapperDrawer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 50px;
+}

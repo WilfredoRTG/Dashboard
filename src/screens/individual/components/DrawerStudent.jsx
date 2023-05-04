@@ -1,17 +1,17 @@
 import React from "react";
-import "../home.css";
 import { Stack, IconButton } from "@mui/material";
-import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
+import PersonIcon from "@mui/icons-material/Person";
+import "../individual.css";
 import { useNavigate } from "react-router-dom";
 
-const Drawer = () => {
+const DrawerStudent = () => {
   const navigate = useNavigate();
   return (
     <div className="containerDrawer">
       <div className="wrapperDrawer">
         <IconButton
           onClick={() => {
-            navigate("/individual")
+            navigate("/")
           }}
           sx={{
             color: "#fff",
@@ -19,11 +19,11 @@ const Drawer = () => {
             borderRadius: "30% !important",
           }}
         >
-          <AdminPanelSettingsIcon />
+          <PersonIcon />
         </IconButton>
       </div>
     </div>
   );
 };
 
-export default Drawer;
+export default DrawerStudent;

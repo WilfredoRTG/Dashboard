@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <div className="root">
-        <h1>Datos generales</h1>
+        <h1>Datos administrativos</h1>
         <div className="chartContainer">
           <div className="chartColumnLeft">
             <MoreVisited />

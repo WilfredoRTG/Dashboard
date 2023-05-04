@@ -2,7 +2,6 @@ import React from "react";
 import {
   CircularProgress,
   Typography,
-  Grid,
   Box,
   circularProgressClasses,
 } from "@mui/material";
